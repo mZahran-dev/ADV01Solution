@@ -44,8 +44,30 @@ namespace ADV01Assignment
             }
 
             #endregion
-        
-        
+            
+            #region 2.create a generic Range<T> class that represents a range of values from a minimum value to a maximum value. The range should support basic operations such as checking if a value is within the range and determining the length of the range.
+
+            Range<int> intRange = new Range<int>(5, 10);
+
+            Console.WriteLine("Is 7 in range: " + intRange.IsInRange(7));
+            Console.WriteLine("Is 11 in range: " + intRange.IsInRange(11));
+            Console.WriteLine("Length of range: " + intRange.Length());
+
+            Range<double> doubleRange = new Range<double>(2.0, 3.0);
+
+            Console.WriteLine("Is 2.0 in range: " + doubleRange.IsInRange(2.0));
+            Console.WriteLine("Is 3.0 in range: " + doubleRange.IsInRange(3.0));
+            Console.WriteLine("Length of range: " + doubleRange.Length());
+
+            Range<decimal> decimalRange = new Range<decimal>(1.5m, 2.5m);
+
+            Console.WriteLine("Is 2.0 in range: " + decimalRange.IsInRange(2.0m));
+            Console.WriteLine("Is 3.0 in range: " + decimalRange.IsInRange(3.0m));
+            Console.WriteLine("Length of range: " + decimalRange.Length());
+
+            #endregion
+
+
         }
     }
 }
